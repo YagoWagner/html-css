@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 11</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('imagens/espaco.jpg');
-            background-position: center center;
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #fora {
+            background-image: url(imagens/espaco.jpg);
             background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
+
+            position: relative;
+            height: 96.9vh;
+            background-color: purple;
+            padding: 10px;
         }
 
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+        #dentro {
+            background-image: url(imagens/astronauta.png);
+            background-size: 100% 100%;
+            position: absolute;
+            width: 400px;
+            height: 400px;
 
-        .center img {
-            max-width: 50%;
-            max-height: 100%;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
-    <div class="center">
-        <img src="imagens/astronauta.png" alt="astronauta">
-    </div>
+    <section id="fora">
+        <article id="dentro">
+        </article>
+    </section>
 </body>
 </html>
